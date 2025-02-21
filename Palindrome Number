@@ -1,0 +1,17 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        if (x<0)
+        {
+            return false;
+        }
+        long reversed=0;
+        long var=x; 
+        while(var!=0)
+        {
+            int digit=(int) (var%10);
+            reversed=reversed*10+digit;
+            var=var/10;
+        } 
+        return (reversed==x);      
+    }
+}
